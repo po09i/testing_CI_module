@@ -1,8 +1,9 @@
-from main import extract_nifti_data, threshold_data, get_mean
+from awesome_package.main import extract_nifti_data, threshold_data, get_mean
 import nibabel as nib
 import numpy as np
 import os
 import logging
+
 
 def test_extract_nifti_data(tmpdir):
     data = np.ones((32, 32, 15, 100), dtype=np.int16)
@@ -15,7 +16,7 @@ def test_extract_nifti_data(tmpdir):
 
 
 def test_threshold_data():
-    data = np.random.randn(4,4)
+    data = np.random.randn(4, 4)
     threshold = 0.1
     thresholded_data = threshold_data(data, threshold)
 

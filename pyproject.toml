@@ -1,5 +1,5 @@
 [project]
-name = "test_upload_nii_mean"
+name = "awesome_package"
 version = "0.1.0"
 description = "Dummy project that computes the mean and thresholds a NIfTI file"
 authors = [
@@ -20,13 +20,8 @@ dynamic = ["dependencies"]
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
 
-[project.urls]
-homepage = "https://github.com/MartinThoma/infer_pyproject"
-documentation = "https://github.com/MartinThoma/infer_pyproject"
-repository = "https://github.com/MartinThoma/infer_pyproject"
-
 [project.scripts]
-test_main = "main:main"
+test_package = "awesome_package.main:main"
 
 [build-system]
 requires = [
